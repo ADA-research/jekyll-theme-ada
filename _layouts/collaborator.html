@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="container">
+  <h2>AIM collaborator: <strong>{{ page.academic_title }} {{ page.name }}</strong></h2>
+
+  <p style="color: var(--rwth-black-50);">{{ page.affiliation }}</p>
+
+  <img src="{{ site.baseurl }}/assets/collaborators/{{ page.identifier }}/{{ page.identifier }}.jpg" width = "20%" style="float: right;display: block; margin: 0 auto" alt="Photo of {{ page.name }}">
+
+  {{ page.content }}
+
+  {% if page.external_links %}
+  <ul class="member-links">
+    {% for link in page.external_links %}
+    <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  <h3>Joint publications of {{ page.name }} and AIM</h3>
+
+  We have in total {% bibliography_count --file bib --query @*[author^=Nikfarjam] %} publications with Adel.
+
+  {% bibliography --file bib --query @*[author^=Nikfarjam] %}
+
+  <div style="clear: both"></div>
+
+</div>

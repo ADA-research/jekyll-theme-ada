@@ -1,0 +1,80 @@
+---
+layout: default
+title: Chair for Artificial Intelligence Methodology (AIM) at RWTH Aachen University
+---
+
+<div id="our-aim">
+<div class="container">
+
+  <h1>Our AIM</h1>
+
+  <p><strong>To develop the next generation of <abbr title="Artificial Intelligence">AI</abbr> methods, systems and tools, for the benefit of society and humanity.</strong></p>
+
+  <p>Our research is dedicated to methodological and technological advances in human-centred AI. This includes research across different areas of AI, including machine learning, automated reasoning and optimisation. An important focus of our work is on the area of automated AI (including automated machine learning).</p>
+
+  <!--div id="ada-and-aim">
+  <h2><b>AIM @ RWTH</b> and <b>ADA @ LIACS</b> and <b>ADA @ UBC</b></h2-->
+  <p>As part of the international <a href="https://ada.liacs.nl" target="blank" title="Website of the ADA Research Group (external website)">ADA Research Group</a>, we collaborate closely with the Leiden Institute of Advanced Computer Science (LIACS) in the Netherlands and the University of British Columbia (UBC) in Canada.</p>
+  <!--/div-->
+</div>
+</div>
+
+<div class="container">
+  
+  <h1>AIM News</h1>
+
+  {% for post in site.posts %}
+
+  <article class="post">
+    <div class="post_author">
+    {% assign author_data = site.members | where: 'identifier', post.author %}
+    <!--img src="/assets/images/profiles/{{ author_data[0].identifier }}.jpg" alt="Photo of blog post author {{ author_data[0].name }}"-->
+    {{ post.date | date_to_string }}
+    by {{ author_data[0].name }}
+    </div>
+    <div class="post_content">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+
+      {% if post.has_excerpt %}
+      <p><a href="{{ post.url }}">Read entire post ...</a></p>
+      {% endif %}
+    </div>
+  </article>
+
+  {% endfor %}
+  
+</div>
+
+<div class="container">
+
+  <h1>Research</h1>
+  <p>Our research is aimed at creating the next generation of human-centred AI systems and at facilitating their broad use for the benefit of society and humanity ("<i>AI for All</i>" and "<i>AI for Good</i>").</p>
+
+  <p>In addition to the research on the foundations of AI, particularly on topics in machine learning, automated reasoning and optimisation, our work focuses on applications in the fields of medicine and health, in the protection of our environment and habitat, and in the support of artistic activities. Much of our research falls into the area of automated AI (including automated machine learning), which includes the automated construction, customisation, monitoring and analysis of AI algorithms and systems, with the goal of increasing performance and robustness while lowering the level of expertise required for using AI techniques effectively and responsibly.</p>
+
+  <p>For on overview of recent publications see <a href="https://ada.liacs.nl/publications/">the publication list of the ADA group</a>.</p>
+
+</div>
+
+<div class="container">
+  
+  <h1>People</h1>
+  {% include members.html members=site.members %}
+
+</div>
+
+<div class="container">
+
+  <h1>We are hiring</h1>
+  We are looking for
+  <ul>
+    <li><abbr title="Latin: philosophiae doctor or doctor philosophiae">PhD</abbr> candidates</li>
+    <li>Post Docs</li>
+    <li>Scientific programmers</li>
+  </ul>
+  <p><strong>We are also looking for excellent student assistants!</strong> The range of tasks extends from support in research to administrative tasks. If you are interested in a student assistant position please send your application letter, curriculum vitae and a recent transcript of records to <a href="mailto:secret@aim.rwth-aachen.de">secret[at]aim[dot]rwth-aachen[dot]de</a>.</p>
+
+  <p><b>More to come soon!</b></p>
+
+</div>

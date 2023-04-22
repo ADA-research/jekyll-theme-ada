@@ -1,0 +1,579 @@
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* RWTH fonts */
+  font-weight: 300;
+}
+
+body {
+  font-size: 20px;
+  line-height: 2rem;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+strong, b {
+  font-weight: 400;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+:root {
+  /* RWTH primary color */
+  --rwth-blue-100: rgb(0,84,159);
+  --rwth-blue-75: rgb(64,127,183);
+  --rwth-blue-50: rgb(142,186,229);
+  --rwth-blue-25: rgb(199,221,242);
+  --rwth-blue-10: rgb(232,241,250);
+
+  /* RWTH secondary colors */
+  --rwth-black-100: rgb(0, 0, 0);
+  --rwth-black-75: rgb(100, 101, 103);
+  --rwth-black-50: rgb(156, 158, 159);
+  --rwth-black-25: rgb(207, 209, 210);
+  --rwth-black-10: rgb(236, 237, 237);
+
+  --rwth-magenta-100: rgb(227, 0, 102);
+  --rwth-magenta-75: rgb(233, 96, 136);
+  --rwth-magenta-50: rgb(241, 158, 177);
+  --rwth-magenta-25: rgb(249, 210, 218);
+  --rwth-magenta-10: rgb(253, 238, 240);
+
+  --rwth-yellow-100: rgb(255, 237, 0);
+  --rwth-yellow-75: rgb(255, 240, 85);
+  --rwth-yellow-50: rgb(255, 245, 155);
+  --rwth-yellow-25: rgb(255, 250, 209);
+  --rwth-yellow-10: rgb(255, 253, 238);
+
+  /* RWTH additional colors */
+  --rwth-petrol-100: rgb(0, 97, 101);
+  --rwth-petrol-75: rgb(45, 127, 131);
+  --rwth-petrol-50: rgb(125, 164, 167);
+  --rwth-petrol-25: rgb(191, 208, 209);
+  --rwth-petrol-10: rgb(230, 236, 236);
+
+  --rwth-turquoise-100: rgb(0, 152, 161);
+  --rwth-turquoise-75: rgb(0, 177, 183);
+  --rwth-turquoise-50: rgb(137, 204, 207);
+  --rwth-turquoise-25: rgb(202, 231, 231);
+  --rwth-turquoise-10: rgb(235, 246, 246);
+
+  --rwth-green-100: rgb(87, 171, 39);
+  --rwth-green-75: rgb(141, 192, 96);
+  --rwth-green-50: rgb(184, 214, 152);
+  --rwth-green-25: rgb(221, 235, 206);
+  --rwth-green-10: rgb(242, 247, 236);
+
+  --rwth-maygreen-100: rgb(189, 205, 0);
+  --rwth-maygreen-75: rgb(208, 217, 92);
+  --rwth-maygreen-50: rgb(224, 230, 154);
+  --rwth-maygreen-25: rgb(240, 243, 208);
+  --rwth-maygreen-10: rgb(249, 250, 237);
+
+  --rwth-orange-100: rgb(246, 168, 0);
+  --rwth-orange-75: rgb(250, 190, 80);
+  --rwth-orange-50: rgb(253, 212, 143);
+  --rwth-orange-25: rgb(254, 234, 201);
+  --rwth-orange-10: rgb(255, 247, 234);
+
+  --rwth-red-100: rgb(204, 7, 30);
+  --rwth-red-75: rgb(216, 92, 65);
+  --rwth-red-50: rgb(230, 150, 121);
+  --rwth-red-25: rgb(243, 205, 187);
+  --rwth-red-10: rgb(250, 235, 227);
+
+  --rwth-maroon-100: rgb(161, 16, 53);
+  --rwth-maroon-75: rgb(182, 82, 86);
+  --rwth-maroon-50: rgb(205, 139, 135);
+  --rwth-maroon-25: rgb(229, 197, 192);
+  --rwth-maroon-10: rgb(245, 232, 229);
+
+  --rwth-violet-100: rgb(97, 33, 88);
+  --rwth-violet-75: rgb(131, 78, 117);
+  --rwth-violet-50: rgb(168, 133, 158);
+  --rwth-violet-25: rgb(210, 192, 205);
+  --rwth-violet-10: rgb(237, 229, 234);
+
+  --rwth-purple-100: rgb(122, 111, 172);
+  --rwth-purple-75: rgb(155, 145, 193);
+  --rwth-purple-50: rgb(188, 181, 215);
+  --rwth-purple-25: rgb(222, 218, 235);
+  --rwth-purple-10: rgb(242, 240, 247);
+}
+
+abbr {
+  border-bottom: 1px dashed #cfcfcf;
+  cursor: help;
+}
+
+#tooltip {
+  display: block;
+  font-size: 15px;
+  color: white;
+  background-color: var(--rwth-blue-75);
+  padding: 5px 8px;
+  min-width: 80px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.infobox {
+  display: block;
+  background: var(--rwth-blue-25);
+  border: 1px solid var(--rwth-blue-50);
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* LINKS */
+a,
+a:link {
+  color: var(--rwth-blue-100);
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: var(--rwth-turquoise-100);
+  transition: 0.3s;
+  text-decoration: underline;
+  /*border-bottom: 2px solid var(--rwth-turquoise-75);*/
+}
+
+/* EXTERNAL LINKS */
+a[href^="http"]::after,
+a[href^="https://"]::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M384 320c-17.67 0-32 14.33-32 32v96H64V160h96c17.67 0 32-14.32 32-32s-14.33-32-32-32L64 96c-35.35 0-64 28.65-64 64V448c0 35.34 28.65 64 64 64h288c35.35 0 64-28.66 64-64v-96C416 334.3 401.7 320 384 320zM488 0H352c-12.94 0-24.62 7.797-29.56 19.75c-4.969 11.97-2.219 25.72 6.938 34.88L370.8 96L169.4 297.4c-12.5 12.5-12.5 32.75 0 45.25C175.6 348.9 183.8 352 192 352s16.38-3.125 22.62-9.375L416 141.3l41.38 41.38c9.156 9.141 22.88 11.84 34.88 6.938C504.2 184.6 512 172.9 512 160V24C512 10.74 501.3 0 488 0z'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  opacity: 0.3;
+}
+
+article a[href^="https://aim.rwth-aachen.de"]::after {
+  display: none !important;
+}
+
+/* MAIL LINKS */
+a[href^="mailto:"]::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  margin-bottom: -2px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M464 64C490.5 64 512 85.49 512 112C512 127.1 504.9 141.3 492.8 150.4L275.2 313.6C263.8 322.1 248.2 322.1 236.8 313.6L19.2 150.4C7.113 141.3 0 127.1 0 112C0 85.49 21.49 64 48 64H464zM217.6 339.2C240.4 356.3 271.6 356.3 294.4 339.2L512 176V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V176L217.6 339.2z'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+#content ul,
+#content ol {
+  margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--rwth-blue-100);
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.refer {
+  color: var(--rwth-black-75);
+}
+
+/* GENERAL STRUCTURE */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 .1rem .08rem rgba(0, 0, 0, .3);
+  background-color: rgba(255, 255, 255, 1);
+  /*margin-bottom: 35px;*/
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+header h1 {
+  border-bottom: 0;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+}
+
+#our-aim {
+  width: 100%;
+  background-color: var(--rwth-blue-100);
+  color: white;
+  text-align: center;
+  padding: 25px 10% 25px;
+}
+
+#our-aim h1,
+#our-aim h2 {
+  color: white;
+}
+
+#our-aim a,
+#our-aim a:link {
+  color: var(--rwth-blue-50);
+}
+
+#ada-and-aim {
+  font-size: 110%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#ada-and-aim h2 {
+  text-transform: none;
+  font-size: 110%;
+}
+
+#ada-and-aim h2 b {
+  color: var(--rwth-blue-100);
+  background-color: white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 2px 6px;
+}
+
+#our-aim a[href^="http"]::after,
+#our-aim a[href^="https://"]::after {
+  display: none;
+  /* ToDo: background image in white color */;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M384 320c-17.67 0-32 14.33-32 32v96H64V160h96c17.67 0 32-14.32 32-32s-14.33-32-32-32L64 96c-35.35 0-64 28.65-64 64V448c0 35.34 28.65 64 64 64h288c35.35 0 64-28.66 64-64v-96C416 334.3 401.7 320 384 320zM488 0H352c-12.94 0-24.62 7.797-29.56 19.75c-4.969 11.97-2.219 25.72 6.938 34.88L370.8 96L169.4 297.4c-12.5 12.5-12.5 32.75 0 45.25C175.6 348.9 183.8 352 192 352s16.38-3.125 22.62-9.375L416 141.3l41.38 41.38c9.156 9.141 22.88 11.84 34.88 6.938C504.2 184.6 512 172.9 512 160V24C512 10.74 501.3 0 488 0z'/%3E%3C/svg%3E");
+}
+
+body > footer {
+  width: 100%;
+  background-color: var(--rwth-black-10);
+  margin-top: 50px;
+  padding: 30px 0px 50px;
+}
+
+footer .container {
+  display: flex;
+  /*justify-content: space-between;*/
+  flex-direction: row;
+}
+
+footer section {
+  flex-basis: 100%;
+}
+
+#logo img {
+  margin: 15px 0 0 0;
+  width: 300px;
+}
+
+/* MAIN MENU */
+.toggle {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.here-we-are {
+  font-weight: bold;
+  border-bottom: 3px solid var(--rwth-blue-75);
+}
+
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  line-height: 1;
+}
+
+header ul a {
+  display: block;
+  letter-spacing: 1px;
+  padding: 30px 15px 25px 15px;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  /* JB: temporaritly adapted since we now have 8 main menu items */
+  font-size: 18px;
+  padding: 33px 15px 26px 15px;
+
+}
+
+header ul a:focus,
+header ul a:hover {
+  /*text-decoration: underline;*/
+  transition: none;
+  text-decoration: none;
+  color: var(--rwth-blue-75);
+  border-bottom-color: var(--rwth-blue-25);
+  transition: all .2s ease-in-out;
+}
+
+/* BLOG */
+#blog article img {
+  display: block;
+  /*border: 5px solid var(--rwth-black-10);*/
+}
+
+/*.post {
+  display: flex;
+}
+*/
+
+.post {
+  margin-bottom: 45px;
+}
+
+.post_author {
+/*  flex-basis: 23%;
+*/  font-size: 14px;
+  line-height: 1.1rem;
+  /*padding-top: 27px;*/
+  color: var(--rwth-black-50);
+}
+
+.post_author img {
+  float: left;
+  margin-top: -8px;
+  position: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+/* MEMBER LIST */
+#member-list .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.member:first-child {
+  padding-right: 25px;
+}
+
+.member-image {
+  position: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.member-name {
+  display: block;
+  font-weight: 500;
+}
+
+.member-position {
+  display: block;
+  color: var(--rwth-black-75);
+}
+
+/*.member-description {
+  margin-top: 10px;
+}
+*/
+.member-links {
+  font-size: 0.8rem;
+  line-height: 2.0rem;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0 !important;
+}
+
+.member-links li {
+  display: inline;
+}
+
+.member-links li:not(:last-child)::after {
+  content: "|";
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.member-links a[href^="http"]::after,
+.member-links a[href^="https://"]::after {
+  height: 10px;
+  width: 10px;
+}
+
+
+.member-links a[href^="http"]::after,
+.member-links a[href^="https://"]::after {
+  display: none;
+}
+
+.member-links a {
+  border-radius: 5px;
+  border: 1px solid var(--rwth-blue-50);
+  background-color: white;
+  text-transform: uppercase;
+  padding: 6px 8px;
+}
+
+.member-links a:hover,
+.member-links a:focus {
+  /*border-color: var(--rwth-turquoise-100);*/
+  background-color: var(--rwth-blue-100);
+  border-color: var(--rwth-blue-100);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.member-links li:not(:last-child)::after {
+  display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 98%;
+  }
+
+  header {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header ul a {
+    font-size: 18px;
+    padding: 33px 15px 26px 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4rem;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  #logo img {
+    margin: 12px 0 0 0;
+    width: 270px;
+  }
+
+  .toggle {
+    display: block;
+    font-size: 25px;
+    margin-top: 23px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    z-index: 9999;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 .1rem .08rem rgba(0, 0, 0, .3);
+  }
+
+  header ul {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  header ul a {
+    display: block;
+    letter-spacing: 1px;
+    padding: 10px 15px 10px 15px;
+    border-bottom: 0;
+    background: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  header ul a:link,
+  header ul a:hover {
+    border-bottom: 0;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  #ada-and-aim {
+    padding: 0;
+  }
+
+  #ada-and-aim h2 b{
+    /*padding: 1px 3px;*/
+    line-height: 110%;
+  }
+
+
+  #member-list .row {
+    flex-direction: column;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+}
