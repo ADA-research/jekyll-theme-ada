@@ -3,24 +3,34 @@
   box-sizing: border-box;
   font-family: 'Helvetica Neue', Arial, sans-serif; /* RWTH fonts */
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: 20px;
   line-height: 2rem;
-  margin: 0;
-}
-
-p {
-  margin-bottom: 10px;
 }
 
 strong, b {
   font-weight: 400;
 }
 
+p {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 22px;
+  margin-top: 5px;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
 ul, ol {
-  margin: 0;
+  margin-left: 1.5rem;
 }
 
 :root {
@@ -176,18 +186,13 @@ a[href^="mailto:"]::after {
   opacity: 0.3;
 }
 
-#content ul,
-#content ol {
-  margin-bottom: 10px;
-}
-
 h1,
 h2,
 h3,
 h4 {
   color: var(--rwth-blue-100);
   font-weight: 300;
-  line-height: 2rem;
+/*  line-height: 2rem;*/
 }
 
 h1 {
@@ -210,7 +215,12 @@ header {
   /*margin-bottom: 35px;*/
 }
 
-header .container {
+header .wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+header .box {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -221,19 +231,23 @@ header h1 {
   margin: 0;
 }
 
-.container {
+.wrapper {
+  width: 100%;
+  padding: 2rem 0 2rem;
+}
+
+.box {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 1400px;
 }
 
 #our-aim {
-  width: 100%;
   background-color: var(--rwth-blue-100);
   color: white;
   text-align: center;
-  padding: 25px 10% 25px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 #our-aim h1,
@@ -268,18 +282,14 @@ header h1 {
 #our-aim a[href^="http"]::after,
 #our-aim a[href^="https://"]::after {
   display: none;
-  /* ToDo: background image in white color */;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M384 320c-17.67 0-32 14.33-32 32v96H64V160h96c17.67 0 32-14.32 32-32s-14.33-32-32-32L64 96c-35.35 0-64 28.65-64 64V448c0 35.34 28.65 64 64 64h288c35.35 0 64-28.66 64-64v-96C416 334.3 401.7 320 384 320zM488 0H352c-12.94 0-24.62 7.797-29.56 19.75c-4.969 11.97-2.219 25.72 6.938 34.88L370.8 96L169.4 297.4c-12.5 12.5-12.5 32.75 0 45.25C175.6 348.9 183.8 352 192 352s16.38-3.125 22.62-9.375L416 141.3l41.38 41.38c9.156 9.141 22.88 11.84 34.88 6.938C504.2 184.6 512 172.9 512 160V24C512 10.74 501.3 0 488 0z'/%3E%3C/svg%3E");
 }
 
 body > footer {
-  width: 100%;
   background-color: var(--rwth-black-10);
-  margin-top: 50px;
-  padding: 30px 0px 50px;
 }
 
-footer .container {
+footer .box {
   display: flex;
   /*justify-content: space-between;*/
   flex-direction: row;
@@ -354,14 +364,10 @@ header ul a:hover {
   /*border: 5px solid var(--rwth-black-10);*/
 }
 
-/*.post {
-  display: flex;
+.post:not(:first-child) {
+  margin-top: 25px;
 }
-*/
 
-.post {
-  margin-bottom: 45px;
-}
 
 .post_author {
 /*  flex-basis: 23%;
@@ -469,14 +475,31 @@ header ul a:hover {
   text-decoration: none;
 }
 
+.faq_question {
+  cursor: pointer;
+}
 
+.faq_question:after {
+  display: inline-block;
+  content: '+';
+  color: gray;
+  padding-left: 0.1rem;
+}
+
+.faq_open:after {
+  content: '-';
+}
+
+.faq_answer {
+  display: none;
+}
 
 .member-links li:not(:last-child)::after {
   display: none;
 }
 
 @media only screen and (max-width: 1400px) {
-  .container {
+  .box {
     width: 98%;
   }
 
@@ -555,7 +578,7 @@ header ul a:hover {
     border-bottom: 0;
   }
 
-  .container {
+  .box {
     width: 95%;
   }
 
@@ -573,7 +596,7 @@ header ul a:hover {
     flex-direction: column;
   }
 
-  footer .container {
+  footer .box {
     flex-direction: column;
   }
 }

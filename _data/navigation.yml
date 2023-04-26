@@ -1,2 +1,4 @@
-- name: Home
-  link: /
+- name: Demo
+  link: /index.html
+- name: Demo single
+  link: /single.html

@@ -6,59 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.tooltip-1.0.js?v=1"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/main.js"></script>
 
   <title>{{ page.title }}</title>
   <!-- description used by search engines, matching keywords highlighted in bold -->
-  <meta name="description" content="The Chair for AI Methodology (AIM) at RWTH Aachen University is led by Alexander von Humboldt Professor Dr. Holger Hoos. The AIM group conducts research across different areas of AI, including machine learning, automated reasoning and optimisation.">
+  <meta name="description" content="{{ page.description }}">
 
 </head>
 
-<body>
-  <header>
-    <div class="container">
-      <a href="{{ site.baseurl }}/"><h1 id="logo"><img src="{{ site.baseurl }}/assets/images/AIM_logo_backup.png" alt="Chair for Artiticial Intelligence Methodology (AIM) at RWTH Aachen University"></h1></a>
-      {% include navigation.html %}
-    </div>
-  </header>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="box">
+          <a href="{{ site.baseurl }}/"><h1 id="logo"><img src="{{ site.baseurl }}/assets/images/AIM_logo_backup.png" alt="Chair for Artiticial Intelligence Methodology (AIM) at RWTH Aachen University"></h1></a>
+        {% include navigation.html %}
+        </div>
+      </div>
+    </header>
 
-  <div id="content">
-  {{ content }}
-  </div>
+    {{ content }}
 
-  <footer>
-    <div class="container">
-    <section>
-    <h1>Contact</h1>
+    <footer>
+      <div class="wrapper">
+        <div class="box">
+          <section>
+            <h1>Contact</h1>
 
-    <p>
-      RWTH Chair for AI Methodology<br>
-      Theaterstraße 35-39<br>
-      52062 Aachen
-    </p>
+            <p>
+              RWTH Chair for AI Methodology<br>
+              Theaterstraße 35-39<br>
+              52062 Aachen
+            </p>
 
-    <p>
-      <strong>Are you interested in a collaboration?</strong><br>Get to know more on our <a href="{{ site.baseurl }}/contact.html">contact page</a>.
-    </p>
+            <p>
+              <strong>Are you interested in a collaboration?</strong><br>Get to know more on our <a href="{{ site.baseurl }}/contact.html">contact page</a>.
+            </p>
 
-    <p>© 2022 RWTH Chair for AI Methodology</p>
-    </section>
-    <section id="links">
-      <h1>External links</h1>
-      <ul>
-        <li><a href="{{ site.baseurl }}/disclaimer.html">Disclaimer</a></li>
-        <li><a href="https://www.rwth-aachen.de/" target="_blank">RWTH Aachen University</a></li>
-        <li><a href="https://ada.liacs.nl" target="_blank">ADA Research Group</a></li>
-        <li><a href='https://liacs.leidenuniv.nl' target="_blank">LIACS</a></li>
-        <li><a href='https://www.universiteitleiden.nl' target="_blank">Leiden University</a></li>
-        <li><a href='https://www.ubc.ca' target="_blank">University of British Columbia (UBC)</a>
-      </ul>
-    </section>
-    </div>
-  </footer>
+            <p>© 2022 - {{ 'now' | date: "%Y" }} RWTH Chair for AI Methodology</p>
+          </section>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery.tooltip-1.0.js?v=1"></script>
-  <script type="text/javascript" src="{{ site.baseurl }}/assets/js/main.js?v=1"></script>
-</body>
+          <section id="links">
+            <h1>External links</h1>
+            <ul>
+              <li><a href="{{ site.baseurl }}/disclaimer.html">Disclaimer</a></li>
+              <li><a href="https://www.rwth-aachen.de/" target="_blank">RWTH Aachen University</a></li>
+              <li><a href="https://ada.liacs.nl" target="_blank">ADA Research Group</a></li>
+              <li><a href='https://liacs.leidenuniv.nl' target="_blank">LIACS</a></li>
+              <li><a href='https://www.universiteitleiden.nl' target="_blank">Leiden University</a></li>
+              <li><a href='https://www.ubc.ca' target="_blank">University of British Columbia (UBC)</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+
+  </body>
 </html>
