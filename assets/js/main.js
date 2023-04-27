@@ -17,7 +17,7 @@ $(document).ready(function() {
 
       // now smoothly scroll
       $('html, body').animate({
-        scrollTop: $(hash).offset().top
+        scrollTop: $(hash).offset().top + 200
       }, 300, function() {
         window.location.hash = hash;
       });
