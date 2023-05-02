@@ -79,24 +79,24 @@
   --rwth-purple-50: rgb(188, 181, 215);
   --rwth-purple-25: rgb(222, 218, 235);
   --rwth-purple-10: rgb(242, 240, 247);
-
-  /* RELEVANT HIGHTLIGHT COLORS */
-  --main-font-color: var(--rwth-blue-75);
-  /* background of highlight boxes (e.g., mainly the "teaser" box at the top of the homepage) */
-  --background-color-highlight-strong: var(--rwth-blue-100);
-  /* light gray background */
-  --background-color-highlight-light: var(--rwth-black-10);
-  /* add headers h{1,...,4} */
-  --headline-color: var(--rwth-blue-100);
-  /* links in main sections */
-  --link-color: var(--rwth-blue-75);
-  --link-hover-color: var(--rwth-blue-100);
-  /* currently active link */
-  --link-active-color: var(--link-hover-color);
-  --refer-color: var(--rwth-black-50);
-
-  --alert-color: var(--rwth-red-100);
 }
+
+/* COLOR VARIABLES */
+$main-font-color: var(--rwth-blue-75);
+/* background of highlight boxes (e.g., mainly the "teaser" box at the top of the homepage) */
+$background-color-highlight-strong: var(--rwth-blue-100);
+/* light gray background */
+$background-color-highlight-light: var(--rwth-black-10);
+/* add headers h{1,...,4} */
+$headline-color: var(--rwth-blue-100);
+/* links in main sections */
+$link-color: var(--rwth-blue-75);
+$link-hover-color: var(--rwth-blue-100);
+/* currently active link */
+$link-active-color: var(--link-hover-color);
+$refer-color: var(--rwth-black-50);
+/* special colors */
+$alert-color: var(--rwth-red-100);
 
 /* GENERAL STYLES */
 * {
@@ -142,7 +142,7 @@ abbr {
   display: block;
   font-size: 15px;
   color: white;
-  background: var(--background-color-highlight-strong);
+  background: $background-color-highlight-strong;
   padding: 5px 8px;
   min-width: 80px;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
@@ -150,7 +150,7 @@ abbr {
 
 .infobox {
   display: block;
-  background: var(--background-color-highlight-strong);
+  background: $background-color-highlight-strong;
   border: 1px solid var(--rwth-blue-50);
   padding: 15px 20px;
   font-size: 14px;
@@ -160,13 +160,13 @@ abbr {
 /* LINKS */
 a,
 a:link {
-  color: var(--link-color);
+  color: $link-color;
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: var(--link-hover-color);
+  color: $link-hover-color;
   transition: 0.3s;
   text-decoration: underline;
 }
@@ -206,7 +206,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--headline-color);
+  color: $headline-color;
   font-weight: 300;
 /*  line-height: 2rem;*/
 }
@@ -216,7 +216,7 @@ h1 {
 }
 
 .refer {
-  color: var(--refer-color);
+  color: $refer-color;
 }
 
 /* GENERAL STRUCTURE */
@@ -268,7 +268,7 @@ header h1 {
 }
 
 #our-aim {
-  background: var(--background-color-highlight-strong);
+  background: $background-color-highlight-strong;
   color: white;
   text-align: center;
   padding-left: 25px;
@@ -311,7 +311,7 @@ header h1 {
 }
 
 body > footer {
-  background-color: var(--background-color-highlight-light);
+  background-color: $background-color-highlight-light;
 }
 
 footer .box {
@@ -345,7 +345,7 @@ footer .box {
 
 .here-we-are {
   font-weight: bold;
-  border-bottom: 3px solid var(--link-active-color);
+  border-bottom: 3px solid $link-active-color;
 }
 
 header ul {
