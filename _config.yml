@@ -29,10 +29,10 @@ encoding: utf-8
 lang: en-GB
 # activate to have a "text logo"
 title: "ADA theme" # site name or title
-#logo: "/assets/images/AIM_logo.png" # relative path to logo
+#logo: "/assets/images/RWTH_logo.png" # relative path to logo
 #logo_alt_text: "ADA theme logo"
 # activate exclusively (comment 'title') to have a "text logo"
-#logo_text: "ADA"
+logo_text: "ADA"
 description: "ADA website" # site description / default description
 theme: jekyll-theme-ada
 repo: "https://github.com/jakobbossek/jekyll-theme-ada"

@@ -304,6 +304,10 @@ footer .box {
   grid-row-gap: 25px;
 }
 
+#logo:after {
+  display: none;
+}
+
 #logo h1 {
   display: block;
   margin: 24px 0;
