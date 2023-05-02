@@ -1,38 +1,3 @@
-/* GENERAL STYLES */
-* {
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', Arial, sans-serif; /* RWTH fonts */
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-size: 20px;
-  line-height: 2rem;
-}
-
-strong, b {
-  font-weight: 400;
-}
-
-p {
-  margin-bottom: 10px;
-}
-
-h1, h2, h3 {
-  margin-bottom: 22px;
-  margin-top: 5px;
-}
-
-h1:first-child {
-  margin-top: 0;
-}
-
-ul, ol {
-  margin: 0 0 0.8rem 1.5rem
-}
-
 :root {
   /* RWTH primary color */
   --rwth-blue-100: rgb(0,84,159);
@@ -114,6 +79,58 @@ ul, ol {
   --rwth-purple-50: rgb(188, 181, 215);
   --rwth-purple-25: rgb(222, 218, 235);
   --rwth-purple-10: rgb(242, 240, 247);
+
+  /* RELEVANT HIGHTLIGHT COLORS */
+  --main-font-color: var(--rwth-blue-75);
+  /* background of highlight boxes (e.g., mainly the "teaser" box at the top of the homepage) */
+  --background-color-highlight-strong: var(--rwth-blue-100);
+  /* light gray background */
+  --background-color-highlight-light: var(--rwth-black-10);
+  /* add headers h{1,...,4} */
+  --headline-color: var(--rwth-blue-100);
+  /* links in main sections */
+  --link-color: var(--rwth-blue-75);
+  --link-hover-color: var(--rwth-blue-100);
+  /* currently active link */
+  --link-active-color: var(--link-hover-color);
+  --refer-color: var(--rwth-black-50);
+
+  --alert-color: var(--rwth-red-100);
+}
+
+/* GENERAL STYLES */
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* RWTH fonts */
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+strong, b {
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 22px;
+  margin-top: 5px;
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+ul, ol {
+  margin: 0 0 0.8rem 1.5rem
 }
 
 abbr {
@@ -125,7 +142,7 @@ abbr {
   display: block;
   font-size: 15px;
   color: white;
-  background-color: var(--rwth-blue-75);
+  background: var(--background-color-highlight-strong);
   padding: 5px 8px;
   min-width: 80px;
   box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
@@ -133,7 +150,7 @@ abbr {
 
 .infobox {
   display: block;
-  background: var(--rwth-blue-25);
+  background: var(--background-color-highlight-strong);
   border: 1px solid var(--rwth-blue-50);
   padding: 15px 20px;
   font-size: 14px;
@@ -143,16 +160,15 @@ abbr {
 /* LINKS */
 a,
 a:link {
-  color: var(--rwth-blue-100);
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: var(--rwth-turquoise-100);
+  color: var(--link-hover-color);
   transition: 0.3s;
   text-decoration: underline;
-  /*border-bottom: 2px solid var(--rwth-turquoise-75);*/
 }
 
 /* EXTERNAL LINKS */
@@ -190,7 +206,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--rwth-blue-100);
+  color: var(--headline-color);
   font-weight: 300;
 /*  line-height: 2rem;*/
 }
@@ -200,7 +216,7 @@ h1 {
 }
 
 .refer {
-  color: var(--rwth-black-75);
+  color: var(--refer-color);
 }
 
 /* GENERAL STRUCTURE */
@@ -252,7 +268,7 @@ header h1 {
 }
 
 #our-aim {
-  background-color: var(--rwth-blue-100);
+  background: var(--background-color-highlight-strong);
   color: white;
   text-align: center;
   padding-left: 25px;
@@ -295,7 +311,7 @@ header h1 {
 }
 
 body > footer {
-  background-color: var(--rwth-black-10);
+  background-color: var(--background-color-highlight-light);
 }
 
 footer .box {
@@ -329,7 +345,7 @@ footer .box {
 
 .here-we-are {
   font-weight: bold;
-  border-bottom: 3px solid var(--rwth-blue-75);
+  border-bottom: 3px solid var(--link-active-color);
 }
 
 header ul {
