@@ -1,11 +1,6 @@
 {% assign identifiers = include.members | split:"," %}
 
 <div id="member-list">
-  {% comment %}
-  Here, each two members are wrapped in a row.
-  {% endcomment %}
-
-  {% assign counter = 1 | modulo:2 %}
   {% assign should_be_shown = 0 %}
   {% for member in site.members %}
     {% assign should_be_shown = 0 %}
@@ -15,10 +10,6 @@
       {% endif %}
     {% endfor %}
     {% if should_be_shown == 1 %}
-      {% if counter == 1 %}
-        <div class="row">
-      {% endif %}
-      {% assign counter = counter | plus:1 | modulo:2 %}
       <div class="member">
         <img class="member-image" src="{{ site.baseurl }}/assets/images/profiles/{{ member.identifier }}.jpg" alt="Photo of {{ member.name }}">
         <span class="member-name">{{ member.academic_title }} {{ member.name }}</span>
@@ -32,12 +23,6 @@
           {% endif %}
         </p>
       </div>
-      {% if counter == 1 %}
-      </div>
-      {% endif %}
     {% endif %}
   {% endfor %}
-  {% if counter == 0 %}
-  </div>
-  {% endif %}
 </div>
