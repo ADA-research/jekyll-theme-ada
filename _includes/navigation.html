@@ -2,7 +2,7 @@
 <nav id="menu">
   <ul>
     {% for item in site.data.navigation %}
-    <li><a href="{{ item.link | absolute_url }}" {% if page.url == item.link %}class="here-we-are"{% endif %}>{{ item.name }}</a></li>
+    <li><a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="here-we-are"{% endif %}>{{ item.name }}</a></li>
     {% endfor %}
   </ul>
 </nav>
