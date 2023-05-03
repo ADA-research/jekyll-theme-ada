@@ -1,5 +1,5 @@
 {% if site.logo %}
-  <a id="logo" href="{{ '/' | absolute_url }}/"><img src="{{ site.logo | absolute_url }}" alt="{{ site.logo_alt_text }}"></a>
+  <a id="logo" href="{{ '/' | relative_url }}"><img src="{{ site.logo | relative_url }}" alt="{{ site.logo_alt_text }}"></a>
 {% elsif site.logo_text %}
-  <a id="logo" href="{{ '/' | absolute_url }}/"><h1>{{ site.logo_text }}</h1></a>
+  <a id="logo" href="{{ '/' | relative_url }}/"><h1>{{ site.logo_text }}</h1></a>
 {% endif %}
