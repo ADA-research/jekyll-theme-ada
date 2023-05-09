@@ -17,10 +17,8 @@ $(document).ready(function() {
 
       // now smoothly scroll
       $('html, body').animate({
-        scrollTop: $(hash).offset().top + 200
-      }, 300, function() {
-        window.location.hash = hash;
-      });
+        'scrollTop': $(hash).offset().top - 100
+      }, 700);
     }
   });
 
